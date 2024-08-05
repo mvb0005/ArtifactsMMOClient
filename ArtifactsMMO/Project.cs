@@ -1,6 +1,9 @@
 
 
 using ArtifactsMMO.Client.API;
+using ArtifactsMMO.Client.Schema;
+using ArtifactsMMO;
 
-var status = await MyCharacters.Action.Move("TWM", 1, 1);
-Console.WriteLine(status);
+
+await MyCharacters.Action.Crafting("TWM", "copper_helmet", 1);
+

@@ -3,6 +3,12 @@ using Newtonsoft.Json;
 
 namespace ArtifactsMMO.Client.Schema
 {
+    public class InventorySlotAttribute : Attribute
+    {
+    }
+    public class InventoryQuantityAttribute : Attribute
+    {
+    }
 
     public record Character(
         [property: JsonProperty("name")] string name,
@@ -70,53 +76,61 @@ namespace ArtifactsMMO.Client.Schema
         [property: JsonProperty("consumable1_slot_quantity")] int consumable1_slot_quantity,
         [property: JsonProperty("consumable2_slot")] string consumable2_slot,
         [property: JsonProperty("consumable2_slot_quantity")] int consumable2_slot_quantity,
-        [property: JsonProperty("inventory_slot1")] string inventory_slot1,
-        [property: JsonProperty("inventory_slot1_quantity")] int inventory_slot1_quantity,
-        [property: JsonProperty("inventory_slot2")] string inventory_slot2,
-        [property: JsonProperty("inventory_slot2_quantity")] int inventory_slot2_quantity,
-        [property: JsonProperty("inventory_slot3")] string inventory_slot3,
-        [property: JsonProperty("inventory_slot3_quantity")] int inventory_slot3_quantity,
-        [property: JsonProperty("inventory_slot4")] string inventory_slot4,
-        [property: JsonProperty("inventory_slot4_quantity")] int inventory_slot4_quantity,
-        [property: JsonProperty("inventory_slot5")] string inventory_slot5,
-        [property: JsonProperty("inventory_slot5_quantity")] int inventory_slot5_quantity,
-        [property: JsonProperty("inventory_slot6")] string inventory_slot6,
-        [property: JsonProperty("inventory_slot6_quantity")] int inventory_slot6_quantity,
-        [property: JsonProperty("inventory_slot7")] string inventory_slot7,
-        [property: JsonProperty("inventory_slot7_quantity")] int inventory_slot7_quantity,
-        [property: JsonProperty("inventory_slot8")] string inventory_slot8,
-        [property: JsonProperty("inventory_slot8_quantity")] int inventory_slot8_quantity,
-        [property: JsonProperty("inventory_slot9")] string inventory_slot9,
-        [property: JsonProperty("inventory_slot9_quantity")] int inventory_slot9_quantity,
-        [property: JsonProperty("inventory_slot10")] string inventory_slot10,
-        [property: JsonProperty("inventory_slot10_quantity")] int inventory_slot10_quantity,
-        [property: JsonProperty("inventory_slot11")] string inventory_slot11,
-        [property: JsonProperty("inventory_slot11_quantity")] int inventory_slot11_quantity,
-        [property: JsonProperty("inventory_slot12")] string inventory_slot12,
-        [property: JsonProperty("inventory_slot12_quantity")] int inventory_slot12_quantity,
-        [property: JsonProperty("inventory_slot13")] string inventory_slot13,
-        [property: JsonProperty("inventory_slot13_quantity")] int inventory_slot13_quantity,
-        [property: JsonProperty("inventory_slot14")] string inventory_slot14,
-        [property: JsonProperty("inventory_slot14_quantity")] int inventory_slot14_quantity,
-        [property: JsonProperty("inventory_slot15")] string inventory_slot15,
-        [property: JsonProperty("inventory_slot15_quantity")] int inventory_slot15_quantity,
-        [property: JsonProperty("inventory_slot16")] string inventory_slot16,
-        [property: JsonProperty("inventory_slot16_quantity")] int inventory_slot16_quantity,
-        [property: JsonProperty("inventory_slot17")] string inventory_slot17,
-        [property: JsonProperty("inventory_slot17_quantity")] int inventory_slot17_quantity,
-        [property: JsonProperty("inventory_slot18")] string inventory_slot18,
-        [property: JsonProperty("inventory_slot18_quantity")] int inventory_slot18_quantity,
-        [property: JsonProperty("inventory_slot19")] string inventory_slot19,
-        [property: JsonProperty("inventory_slot19_quantity")] int inventory_slot19_quantity,
-        [property: JsonProperty("inventory_slot20")] string inventory_slot20,
-        [property: JsonProperty("inventory_slot20_quantity")] int inventory_slot20_quantity,
+        [property: JsonProperty("inventory_slot1"), InventorySlot] string inventory_slot1,
+        [property: JsonProperty("inventory_slot1_quantity"), InventoryQuantity] int inventory_slot1_quantity,
+        [property: JsonProperty("inventory_slot2"), InventorySlot] string inventory_slot2,
+        [property: JsonProperty("inventory_slot2_quantity"), InventoryQuantity] int inventory_slot2_quantity,
+        [property: JsonProperty("inventory_slot3"), InventorySlot] string inventory_slot3,
+        [property: JsonProperty("inventory_slot3_quantity"), InventoryQuantity] int inventory_slot3_quantity,
+        [property: JsonProperty("inventory_slot4"), InventorySlot] string inventory_slot4,
+        [property: JsonProperty("inventory_slot4_quantity"), InventoryQuantity] int inventory_slot4_quantity,
+        [property: JsonProperty("inventory_slot5"), InventorySlot] string inventory_slot5,
+        [property: JsonProperty("inventory_slot5_quantity"), InventoryQuantity] int inventory_slot5_quantity,
+        [property: JsonProperty("inventory_slot6"), InventorySlot] string inventory_slot6,
+        [property: JsonProperty("inventory_slot6_quantity"), InventoryQuantity] int inventory_slot6_quantity,
+        [property: JsonProperty("inventory_slot7"), InventorySlot] string inventory_slot7,
+        [property: JsonProperty("inventory_slot7_quantity"), InventoryQuantity] int inventory_slot7_quantity,
+        [property: JsonProperty("inventory_slot8"), InventorySlot] string inventory_slot8,
+        [property: JsonProperty("inventory_slot8_quantity"), InventoryQuantity] int inventory_slot8_quantity,
+        [property: JsonProperty("inventory_slot9"), InventorySlot] string inventory_slot9,
+        [property: JsonProperty("inventory_slot9_quantity"), InventoryQuantity] int inventory_slot9_quantity,
+        [property: JsonProperty("inventory_slot10"), InventorySlot] string inventory_slot10,
+        [property: JsonProperty("inventory_slot10_quantity"), InventoryQuantity] int inventory_slot10_quantity,
+        [property: JsonProperty("inventory_slot11"), InventorySlot] string inventory_slot11,
+        [property: JsonProperty("inventory_slot11_quantity"), InventoryQuantity] int inventory_slot11_quantity,
+        [property: JsonProperty("inventory_slot12"), InventorySlot] string inventory_slot12,
+        [property: JsonProperty("inventory_slot12_quantity"), InventoryQuantity] int inventory_slot12_quantity,
+        [property: JsonProperty("inventory_slot13"), InventorySlot] string inventory_slot13,
+        [property: JsonProperty("inventory_slot13_quantity"), InventoryQuantity] int inventory_slot13_quantity,
+        [property: JsonProperty("inventory_slot14"), InventorySlot] string inventory_slot14,
+        [property: JsonProperty("inventory_slot14_quantity"), InventoryQuantity] int inventory_slot14_quantity,
+        [property: JsonProperty("inventory_slot15"), InventorySlot] string inventory_slot15,
+        [property: JsonProperty("inventory_slot15_quantity"), InventoryQuantity] int inventory_slot15_quantity,
+        [property: JsonProperty("inventory_slot16"), InventorySlot] string inventory_slot16,
+        [property: JsonProperty("inventory_slot16_quantity"), InventoryQuantity] int inventory_slot16_quantity,
+        [property: JsonProperty("inventory_slot17"), InventorySlot] string inventory_slot17,
+        [property: JsonProperty("inventory_slot17_quantity"), InventoryQuantity] int inventory_slot17_quantity,
+        [property: JsonProperty("inventory_slot18"), InventorySlot] string inventory_slot18,
+        [property: JsonProperty("inventory_slot18_quantity"), InventoryQuantity] int inventory_slot18_quantity,
+        [property: JsonProperty("inventory_slot19"), InventorySlot] string inventory_slot19,
+        [property: JsonProperty("inventory_slot19_quantity"), InventoryQuantity] int inventory_slot19_quantity,
+        [property: JsonProperty("inventory_slot20"), InventorySlot] string inventory_slot20,
+        [property: JsonProperty("inventory_slot20_quantity"), InventoryQuantity] int inventory_slot20_quantity,
         [property: JsonProperty("inventory_max_items")] int inventory_max_items,
         [property: JsonProperty("task")] string task,
         [property: JsonProperty("task_type")] string task_type,
         [property: JsonProperty("task_progress")] int task_progress,
         [property: JsonProperty("task_total")] int task_total,
         [property: JsonProperty("account")] string account
-    );
+    )
+    {
+        [JsonIgnore]
+        public int inventory_quantity => typeof(Character).GetProperties().Where(prop => Attribute.IsDefined(prop, typeof(InventoryQuantityAttribute))).Sum(prop => (int)(prop.GetValue(this) ?? 0));
+        [JsonIgnore]
+        public IEnumerable<string> inventory => typeof(Character).GetProperties().Where(prop => Attribute.IsDefined(prop, typeof(InventorySlotAttribute))).Select(prop => (string?)prop.GetValue(this)).OfType<string>();
+        [JsonIgnore]
+        public bool inventory_full => inventory_quantity == inventory_max_items;
+    }
 
     public record MyCharactersResponse( // TODO: This is probably a common paginated response
         [property: JsonProperty("data")] Character[] data,
@@ -131,20 +145,77 @@ namespace ArtifactsMMO.Client.Schema
     {
 
         public record Move(
-        [property: JsonProperty("cooldown")] Cooldown cooldown,
-        [property: JsonProperty("destination")] Destination destination,
-        [property: JsonProperty("character")] Character character
+            [property: JsonProperty("cooldown")] Cooldown cooldown,
+            [property: JsonProperty("destination")] Destination destination,
+            [property: JsonProperty("character")] Character character
         );
 
         public record Equip(
-        [property: JsonProperty("cooldown")] Cooldown cooldown,
-        [property: JsonProperty("slot")] string slot,
-        [property: JsonProperty("item")] Item item,
-        [property: JsonProperty("character")] Character character
+            [property: JsonProperty("cooldown")] Cooldown cooldown,
+            [property: JsonProperty("slot")] string slot,
+            [property: JsonProperty("item")] Item item,
+            [property: JsonProperty("character")] Character character
+        );
+
+        public record Fight(
+            [property: JsonProperty("cooldown")] Cooldown cooldown,
+            [property: JsonProperty("fight")] FightSchema fight,
+            [property: JsonProperty("character")] Character character
+        );
+
+        public record Gathering(
+            [property: JsonProperty("cooldown")] Cooldown cooldown,
+            [property: JsonProperty("details")] Details details,
+            [property: JsonProperty("character")] Character character
+        );
+
+        public record Crafting(
+            [property: JsonProperty("cooldown")] Cooldown cooldown,
+            [property: JsonProperty("details")] Details details,
+            [property: JsonProperty("character")] Character character
         );
 
     }
 
+    public record Drop(
+        [property: JsonProperty("code")] string code,
+        [property: JsonProperty("quantity")] int quantity
+    );
+
+    public record MonsterBlockedHits(
+        [property: JsonProperty("fire")] int fire,
+        [property: JsonProperty("earth")] int earth,
+        [property: JsonProperty("water")] int water,
+        [property: JsonProperty("air")] int air,
+        [property: JsonProperty("total")] int total
+    );
+
+    public record PlayerBlockedHits(
+        [property: JsonProperty("fire")] int fire,
+        [property: JsonProperty("earth")] int earth,
+        [property: JsonProperty("water")] int water,
+        [property: JsonProperty("air")] int air,
+        [property: JsonProperty("total")] int total
+    );
+
+
+    public enum ItemSlot
+    {
+        weapon,
+        shield,
+        helmet,
+        body_armor,
+        leg_armor,
+        boots,
+        ring1,
+        ring2,
+        amulet,
+        artifact1,
+        artifact2,
+        artifact3,
+        consumable1,
+        consumable2
+    }
 
     public record Destination(
         [property: JsonProperty("name")] string name,
@@ -153,11 +224,22 @@ namespace ArtifactsMMO.Client.Schema
         [property: JsonProperty("content")] Content content
     );
 
+    public record FightSchema(
+        [property: JsonProperty("xp")] int xp,
+        [property: JsonProperty("gold")] int gold,
+        [property: JsonProperty("drops")] IReadOnlyList<Drop> drops,
+        [property: JsonProperty("turns")] int turns,
+        [property: JsonProperty("monster_blocked_hits")] MonsterBlockedHits monster_blocked_hits,
+        [property: JsonProperty("player_blocked_hits")] PlayerBlockedHits player_blocked_hits,
+        [property: JsonProperty("logs")] IReadOnlyList<string> logs,
+        [property: JsonProperty("result")] string result
+    );
+
     public record Craft(
         [property: JsonProperty("skill")] string skill,
         [property: JsonProperty("level")] int level,
         [property: JsonProperty("items")] IReadOnlyList<object> items,
-        [property: JsonProperty("quantity")] int quantity
+        [property: JsonProperty("quantity"), InventoryQuantity] int quantity
     );
 
     public record Item(
@@ -171,7 +253,15 @@ namespace ArtifactsMMO.Client.Schema
         [property: JsonProperty("craft")] Craft craft
     );
 
+    public record Details(
+        [property: JsonProperty("xp")] int xp,
+        [property: JsonProperty("items")] IReadOnlyList<ItemDetail> items
+    );
 
+    public record ItemDetail(
+        [property: JsonProperty("code")] string code,
+        [property: JsonProperty("quantity")] int quantity
+    );
 
 
 
